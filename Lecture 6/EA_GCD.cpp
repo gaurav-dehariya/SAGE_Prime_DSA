@@ -1,0 +1,31 @@
+#include <iostream>
+// __gcd()
+#include <algorithm>
+// -infinity and +infinity
+#include <climits>
+
+using namespace std;
+
+int gcd(int a, int b){
+    while(b!=0){
+        int t = a%b;
+        a=b;
+        b=t;
+    }
+    return a;
+}
+
+int main(){
+    int a, b;
+    int c=INT32_MAX;
+    int d=INT32_MIN;
+    cin>>a>>b;
+    while(b!=0){
+        int t = a%b;
+        a=b;
+        b=t;
+    }
+        cout<<a<<endl;
+        cout<<gcd(a,b);
+        return 0;
+}
